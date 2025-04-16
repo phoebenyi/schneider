@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pandas
+openpyxl
+statsmodels
+scikit-learn
+pydantic
+python-multipart
+fastapi-cors
