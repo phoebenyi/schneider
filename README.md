@@ -1,2 +1,2 @@
 # schneider
-:)
+personal exploration project
