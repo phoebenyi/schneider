@@ -117,17 +117,17 @@ A full-stack web application for time-series forecasting that:
 <p align="center">Choose model based on model recommendation guide and upload .xlsx file.</p>
 <p align="center">If auto is selected, best model is chosen based on lowest AIC.</p>
 <p align="center">
-  <img width="600" alt="model-reco" src="https://github.com/user-attachments/assets/19017224-2bda-458e-bc65-06307c2540cb">
+  <img width="800" alt="model-reco" src="https://github.com/user-attachments/assets/56a121a0-9c02-4014-ae4d-8abe6e121ca2">
 </p>
 
 <p align="center"><strong>Forecast Chart, Selected Model, MAPE and Interpretation</strong></p>
 <p align="center">
-  <img width="600" alt="model-reco" src="https://github.com/user-attachments/assets/30b15a82-37b9-4cbb-b4db-125ec4f80004">
+  <img width="800" alt="chart" src="https://github.com/user-attachments/assets/835404da-ec2b-4633-9217-b74068e64eb7">
 </p>
 
 <p align="center"><strong>Forecast Table, Selected Model, MAPE and Interpretation</strong></p>
 <p align="center">
-  <img width="600" alt="model-reco" src="https://github.com/user-attachments/assets/9f611e54-e4bd-49ec-a43a-f2d48fddf049">
+  <img width="800" alt="table" src="https://github.com/user-attachments/assets/f4650d32-371d-4d19-96f5-f618e5f6c03f">
 </p>
 
 
