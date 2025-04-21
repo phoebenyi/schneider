@@ -17,7 +17,8 @@ function App() {
     formData.append('model', selectedModel);
 
     try {
-      const res = await axios.post('http://localhost:8000/upload', formData);
+      // const res = await axios.post('http://localhost:8000/upload', formData);
+      const res = await axios.post("http://backend-service:8000/upload", formData);
       console.log('Backend response:', res.data);
       setData(res.data);
     } catch (err) {
