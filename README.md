@@ -61,26 +61,6 @@ npm run dev
 ```
 🖥️ Frontend runs at: http://localhost:5173
 
-## 📁 Project Structure
-``` bash
-demand-forecasting-app/
-├── backend/
-│   ├── main.py                
-│   ├── forecast.py            
-│   ├── requirements.txt
-├── frontend/
-│   ├── src/
-│   │   ├── App.jsx
-│   │   ├── components/
-│   │   │   ├── FileUpload.jsx
-│   │   │   ├── ChartSection.jsx
-│   │   │   ├── Insights.jsx
-│   ├── tailwind.config.js
-│   ├── postcss.config.js
-│   ├── index.html
-├── sample.xlsx                # Sample input file
-```
-
 ## 📊 Sample Workflow
 - User uploads an .xlsx file with these columns:
   - Geography (7) Country
