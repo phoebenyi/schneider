@@ -7,8 +7,7 @@ A full-stack web application for time-series forecasting that:
 
 ## 🔒 Disclaimer
 
-⚠️ This is a **personal internship project** hosted publicly for educational and demonstration purposes. **No confidential Schneider Electric data (business, operational, or customer) is used, shared, or exposed.** All input samples are **synthetic**.
-
+⚠️ This is a **personal internship project** hosted publicly for educational and demonstration purposes. **No confidential Schneider Electric data (business, operational, or customer) is used, shared, or exposed.** All input samples are **synthetic** and randomly generated. The model is not intended for production use and should not be relied upon for any business decisions. ⚠️
 > ℹ️ This project was developed as part of a personal exploration during an internship with **Schneider Electric's Global Supply Chain Department**. While column headers may resemble internal conventions, **all data rows are fictitious**.
 
 ---
@@ -32,16 +31,50 @@ A full-stack web application for time-series forecasting that:
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technnology Stack Overview
 
-| Layer        | Technology                 |
-|--------------|----------------------------|
-| Frontend     | React + Vite + Tailwind CSS|
-| Backend      | FastAPI (Python)           |
-| Forecasting  | statsmodels + scikit-learn |
-| Visualizations| Recharts (React)          |
-| Deployment   | Docker + Kubernetes (GKE)  |
-| Cloud        | Google Cloud Platform (GKE)|
+<p align="center"><strong>Frontend</strong></p>
+<p align="center">
+<a href="https://vitejs.dev/"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" alt="Vite" height="50"/></a>&nbsp;&nbsp;
+<a href="https://react.dev/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" width="50"/></a>&nbsp;&nbsp;
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" height="50"/></a>&nbsp;&nbsp;
+<a href="https://tailwindcss.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind" height="40"/></a>&nbsp;&nbsp;
+<br>
+<i>Vite · React · JavaScript · Tailwind CSS</i>
+</p>
+<br> 
+
+<p align="center"><strong>Backend</strong></p>
+<p align="center">
+<a href="https://www.python.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png" alt="Python" height="50"/></a>&nbsp;&nbsp;
+<a href="https://fastapi.tiangolo.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/FastAPI_logo.svg" alt="FastAPI" width="120"/></a>&nbsp;&nbsp;
+<br>
+<i>Python · FastAPI</i>
+</p>
+<br> 
+
+<p align="center"><strong>Forecasting & Visualisations</strong></p>
+<p align="center">
+<a href="https://www.statsmodels.org/stable/index.html"><img src="https://github.com/user-attachments/assets/7dfafb26-8fc7-4598-b5a9-1cacc590db57" alt="statsmodels" height="60"/></a>&nbsp;&nbsp;
+<a href="https://scikit-learn.org/stable/"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit-learn" width="100"/></a>&nbsp;&nbsp;
+<a href="https://react.dev/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" width="50"/></a>&nbsp;&nbsp;
+<br>
+<i>statsmodels · scikit-learn · Recharts (React)</i>
+</p>
+<br> 
+
+<p align="center"><strong>Deployment, Containerization, Cloud</strong></p>
+<p align="center">
+<a href="https://github.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" height="60"/></a>&nbsp;&nbsp;
+<a href="https://www.docker.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker" height="30"/>
+</a>&nbsp;&nbsp;
+<a href="https://cloud.google.com/storage/"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="GKE" height="30"/></a>&nbsp;&nbsp;
+<a href="https://github.com/features/actions"><img src="https://github.com/user-attachments/assets/84046b86-7745-4ddd-8c36-b39b6a9ead91" alt="GitHub Actions" height="60"/></a>&nbsp;&nbsp;
+</p>
+<p align="center">
+<i>GitHub · Docker Compose · Google Kubernetes Engine (GKE) · GitHub Actions</i>
+</p>
+<br> 
 
 ---
 
@@ -122,5 +155,4 @@ npm run dev
 ```
 🖥️ Frontend runs at: http://localhost:5173
 
-### 💚 Built by Phoebe Neo
-Intern @ Schneider Electric Global Supply Chain
+© 2025 Phoebe Neo. All rights reserved.
