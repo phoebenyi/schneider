@@ -62,17 +62,22 @@ npm run dev
 🖥️ Frontend runs at: http://localhost:5173
 
 ## 📊 Sample Workflow
-- User uploads an .xlsx file with these columns:
-  - Geography (7) Country
-  - Offer Referential (6.1) Family Code
-  - Date
-  - Quantity
-- Backend parses the file, filters by selected fields, and runs ARIMA and Holt-Winters.
-- Best model is chosen based on AIC.
-- App displays:
-  - Forecast chart for 6 months
-  - Selected model
-  - MAPE and interpretation
+<p align="center"><strong>Model Recommendation Guide</strong></p>
+<p align="center">If auto is selected, best model is chosen based on lowest AIC.</p>
+<p align="center">
+  <img width="600" alt="model-reco" src="https://github.com/user-attachments/assets/19017224-2bda-458e-bc65-06307c2540cb">
+</p>
+
+<p align="center"><strong>Forecast Chart, Selected Model, MAPE and Interpretation</strong></p>
+<p align="center">
+  <img width="600" alt="model-reco" src="https://github.com/user-attachments/assets/30b15a82-37b9-4cbb-b4db-125ec4f80004">
+</p>
+
+<p align="center"><strong>Forecast Table, Selected Model, MAPE and Interpretation</strong></p>
+<p align="center">
+  <img width="600" alt="model-reco" src="https://github.com/user-attachments/assets/9f611e54-e4bd-49ec-a43a-f2d48fddf049">
+</p>
+
 
 ## 🧠 Forecasting Logic
 - ARIMA: AutoRegressive Integrated Moving Average
@@ -86,6 +91,7 @@ npm run dev
 - Clean chart UI with Recharts
 
 ## 📦 Future Improvements
+- ✅ Include more statistical models
 - ✅ Advanced filtering by product & region
 - ✅ Forecast export as PDF or Excel
 - ✅ Trend analysis + anomaly detection
