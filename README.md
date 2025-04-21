@@ -36,7 +36,7 @@ A full-stack web application for time-series forecasting that:
 <p align="center"><strong>Frontend</strong></p>
 <p align="center">
 <a href="https://vitejs.dev/"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" alt="Vite" height="50"/></a>&nbsp;&nbsp;
-<a href="https://react.dev/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" width="50"/></a>&nbsp;&nbsp;
+<a href="https://react.dev/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" width="60"/></a>&nbsp;&nbsp;
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" height="50"/></a>&nbsp;&nbsp;
 <a href="https://tailwindcss.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind" height="40"/></a>&nbsp;&nbsp;
 <br>
@@ -57,7 +57,7 @@ A full-stack web application for time-series forecasting that:
 <p align="center">
 <a href="https://www.statsmodels.org/stable/index.html"><img src="https://github.com/user-attachments/assets/7dfafb26-8fc7-4598-b5a9-1cacc590db57" alt="statsmodels" height="60"/></a>&nbsp;&nbsp;
 <a href="https://scikit-learn.org/stable/"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit-learn" width="100"/></a>&nbsp;&nbsp;
-<a href="https://react.dev/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" width="50"/></a>&nbsp;&nbsp;
+<a href="https://react.dev/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" width="60"/></a>&nbsp;&nbsp;
 <br>
 <i>statsmodels · scikit-learn · Recharts (React)</i>
 </p>
@@ -66,9 +66,9 @@ A full-stack web application for time-series forecasting that:
 <p align="center"><strong>Deployment, Containerization, Cloud</strong></p>
 <p align="center">
 <a href="https://github.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" height="60"/></a>&nbsp;&nbsp;
-<a href="https://www.docker.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker" height="30"/>
+<a href="https://www.docker.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker" height="40"/>
 </a>&nbsp;&nbsp;
-<a href="https://cloud.google.com/storage/"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="GKE" height="30"/></a>&nbsp;&nbsp;
+<a href="https://cloud.google.com/storage/"><img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" alt="GKE" height="60"/></a>&nbsp;&nbsp;
 <a href="https://github.com/features/actions"><img src="https://github.com/user-attachments/assets/84046b86-7745-4ddd-8c36-b39b6a9ead91" alt="GitHub Actions" height="60"/></a>&nbsp;&nbsp;
 </p>
 <p align="center">
@@ -81,15 +81,33 @@ A full-stack web application for time-series forecasting that:
 ## 📦 Deployment Architecture
 
 ```text
-[React Frontend]
-   |
-   |  Docker
-   v
-[FastAPI Backend]  ← Forecast logic + .xlsx processing
-   |
-   |  ClusterIP (K8s internal)
-   v
-[GKE Cluster] → LoadBalancer → http://34.87.39.153
+         +-------------+       +-------------------+       +----------------------+       +-------------+
+         | GitHub Repo |  -->  | GitHub Actions CI |  -->  | Docker Images (x2)  |  -->  |  Docker Hub |
+         +-------------+       +-------------------+       | - schneider-frontend |       +-------------+
+                                                           | - schneider-backend  |
+                                                           +----------------------+
+                                                                    |
+                                                                    v
+                                                      +-----------------------------+
+                                                      | Google Kubernetes Engine    |
+                                                      |  (GKE Cluster)              |
+                                                      |                             |
+                                                      |  +-----------------------+  |
+                                                      |  | React Frontend Pod     |  |
+                                                      |  | - Exposed via          |  |
+                                                      |  |   LoadBalancer Service |--> http://34.87.39.153
+                                                      |  +-----------------------+  |
+                                                      |            |                |
+                                                      |            | HTTP (internal)|
+                                                      |            v                |
+                                                      |  +-----------------------+  |
+                                                      |  | FastAPI Backend Pod   |  |
+                                                      |  | - ClusterIP Service   |  |
+                                                      |  | - Forecast logic      |  |
+                                                      |  | - .xlsx processing    |  |
+                                                      |  +-----------------------+  |
+                                                      +-----------------------------+
+
 ```
 
 ---
