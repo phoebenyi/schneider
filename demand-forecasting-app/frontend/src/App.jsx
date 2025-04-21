@@ -4,6 +4,7 @@ import FileUpload from './components/FileUpload.jsx';
 import ChartSection from './components/ChartSection.jsx';
 import Insights from './components/Insights.jsx';
 import ModelGuide from './components/ModelGuide.jsx';
+import Footer from "./components/Footer";
 
 function App() {
   const [data, setData] = useState(null);
@@ -30,7 +31,7 @@ function App() {
     <div className="flex flex-col items-center justify-start min-h-screen w-full bg-gray-50 text-green-500 p-4 sm:p-6">
       <div className="w-full max-w-5xl">
         <div className="flex justify-between items-center mb-4 flex-wrap gap-4">
-          <h1 className="text-2xl sm:text-3xl font-bold text-center sm:text-left">Schneider Demand Forecast</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-center sm:text-left">Schneider Electric Demand Forecast</h1>
           <button
             onClick={() => setShowGuide(!showGuide)}
             className="text-sm underline hover:text-green-700"
@@ -98,6 +99,7 @@ function App() {
           </>
         )}
       </div>
+      <Footer />
     </div>
   );
 }

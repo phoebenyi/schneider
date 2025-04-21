@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: phoebenyi/schneider-frontend:v2
+        image: phoebenyi/schneider-frontend:v3
         ports:
         - containerPort: 4173
 ---
