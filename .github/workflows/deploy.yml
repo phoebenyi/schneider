@@ -47,10 +47,10 @@ jobs:
           --platform linux/amd64 \
           -t ${{ secrets.DOCKERHUB_USERNAME }}/schneider-backend:v1 \
           --push .
-
+    
     - name: Get GKE credentials
       run: |
-        gcloud container clusters get-credentials ${{ secrets.GKE_CLUSTER_NAME }} \
+        gcloud container clusters get-credentials ${{ secrets.GKE_CLUSTER }} \
           --zone ${{ secrets.GKE_ZONE }} \
           --project ${{ secrets.GKE_PROJECT }}
 
