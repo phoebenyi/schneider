@@ -20,14 +20,14 @@ jobs:
       uses: docker/setup-buildx-action@v2
     - name: Build frontend Docker image
       run: |
-        cd frontend
+        cd demand-forecasting-app/frontend
         docker buildx build \
           --platform linux/amd64 \
           -t ${{ secrets.DOCKERHUB_USERNAME }}/schneider-frontend:v3 \
           --push .
     - name: Build backend Docker image
       run: |
-        cd backend
+        cd demand-forecasting-app/backend
         docker buildx build \
           --platform linux/amd64 \
           -t ${{ secrets.DOCKERHUB_USERNAME }}/schneider-backend:v1 \
@@ -39,7 +39,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Deploy to GKE
       run: |
-        kubectl apply -f k8s/frontend-deployment.yaml
-        kubectl apply -f k8s/backend-deployment.yaml
+        kubectl apply -f demand-forecasting-app/k8s/frontend-deployment.yaml
+        kubectl apply -f demand-forecasting-app/k8s/backend-deployment.yaml
     - name: Check GKE deployment status
       run: kubectl get pods
