@@ -134,7 +134,7 @@ A full-stack web application for time-series forecasting that:
 ## 🧠 Forecasting Logic
 - ARIMA: AutoRegressive Integrated Moving Average
 - Holt-Winters: Exponential Smoothing
-- Model Selection: Lowest AIC ((Akaike Information Criterion)
+- Model Selection: Lowest AIC (Akaike Information Criterion)
 - Evaluation: MAPE on last 3 months as test
 
 ## 📦 Future Improvements
